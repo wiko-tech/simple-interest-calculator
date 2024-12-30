@@ -8,3 +8,4 @@ To calculate the simple interest, run the script:
 
 ```bash
 bash simple-interest.sh
+All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
