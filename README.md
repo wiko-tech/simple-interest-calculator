@@ -8,3 +8,4 @@ To calculate the simple interest, run the script:
 
 ```bash
 bash simple-interest.sh
+2023 XYZ, Inc.
