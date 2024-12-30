@@ -1,4 +1,8 @@
 #!/bin/bash
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7d338381c437f90ea004f98021f312304b7e4242
 # simple-interest.sh
 # A simple script to calculate simple interest
 
