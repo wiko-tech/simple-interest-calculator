@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Stock Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f8f9fa;
+        }
+
+        .in-stock {
+            color: green;
+            font-weight: bold;
+        }
+
+        .out-of-stock {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Stock Tracker</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                <!-- Product rows will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Sample array of products in the inventory
+        const products = [
+            { product: "Laptop", stock: 10 },
+            { product: "Smartphone", stock: 0 },
+            { product: "Headphones", stock: 25 },
+            { product: "Monitor", stock: 0 },
+            { product: "Keyboard", stock: 15 }
+        ];
+
+        /**
+         * Dynamically generates the product table rows based on stock levels.
+         *
+         * @param {Array} productArray - An array of product objects with stock details.
+         */
+        function displayStockLevels(productArray) {
+            const tableBody = document.getElementById("productTableBody");
+            productArray.forEach(({ product, stock }) => {
+                // Create a new table row
+                const row = document.createElement("tr");
+
+                // Create a cell for the product name
+                const productCell = document.createElement("td");
+                productCell.textContent = product;
+
+                // Create a cell for the stock status
+                const statusCell = document.createElement("td");
+                const status = stock > 0 ? "In Stock" : "Out of Stock";
+                statusCell.textContent = status;
+
+                // Apply status-specific styling
+                statusCell.className = stock > 0 ? "in-stock" : "out-of-stock";
+
+                // Append cells to the row
+                row.appendChild(productCell);
+                row.appendChild(statusCell);
+
+                // Append the row to the table body
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Display the stock levels on page load
+        displayStockLevels(products);
+    </script>
+</body>
+</html>
