@@ -1,0 +1,86 @@
+/* ✨ Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light Gray Background */
+    color: #333333; /* Dark Text for Readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ✨ Centered Container */
+.container {
+    background: #ffffff;
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* ✨ Hover Effect on Container */
+.container:hover {
+    transform: translateY(-10px); /* Subtle lift effect */
+}
+
+/* ✨ Heading Styles */
+h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+/* ✨ Count Display */
+#countDisplay {
+    font-size: 32px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+/* ✨ Follow Button */
+button {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* ✨ Button Hover and Active State */
+button:hover {
+    background-color: #2ecc71; /* Bright green when hovered */
+}
+
+button:active {
+    transform: scale(0.98); /* Slight shrink when clicked */
+}
+
+/* ✨ Alert Styles */
+.alert {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f39c12; /* Golden alert background */
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
