@@ -1,0 +1,81 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e1e2e, #252537);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 28px;
+    color: #ffcc00;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Input Field */
+#userInput {
+    width: 90%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#userInput:focus {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 10px #ffcc00;
+}
+
+/* Button */
+#btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #ffcc00;
+    color: #252537;
+    transition: 0.3s ease-in-out;
+}
+
+#btn:hover {
+    background: #ffaa00;
+    box-shadow: 0px 0px 15px #ffaa00;
+}
+
+/* Output Box */
+#output {
+    margin-top: 20px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}

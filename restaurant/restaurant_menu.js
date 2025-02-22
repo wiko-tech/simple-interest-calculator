@@ -1,7 +1,7 @@
-// Initialize the menu arrays
-const breakfastMenu = ['Pancakes', 'Eggs Benedict', 'Oatmeal', 'Frittata'];
-const mainCourseMenu = ['Steak', 'Pasta', 'Burger', 'Salmon'];
-const dessertMenu = ['Cake', 'Ice Cream', 'Pudding', 'Fruit Salad'];
+// Initialize the menu arrays with prices
+const breakfastMenu = ['Pancakes - $12', 'Eggs Benedict - $22.99', 'Oatmeal - $21.99', 'Frittata - $15'];
+const mainCourseMenu = ['Steak - $30', 'Pasta - $18.50', 'Burger - $12.75', 'Salmon - $25.99'];
+const dessertMenu = ['Cake - $8', 'Ice Cream - $5', 'Pudding - $7.50', 'Fruit Salad - $6'];
 
 // Function to display breakfast menu using the map method
 function displayBreakfastMenu() {
@@ -27,20 +27,17 @@ function displayDessertMenu() {
     document.getElementById('dessertMenuItems').innerHTML = dessertItem;
 }
 
-// Function to display total items count using forEach for other menus
-function displayOtherMenus(menuArray, totalItemsId, menuItemsId) {
-    document.getElementById(totalItemsId).textContent = `Total Items: ${menuArray.length}`;
-
-    let menuList = '<ul>';
-    menuArray.forEach(item => {
-        menuList += `<li>${item}</li>`;
-    });
-    menuList += '</ul>';
-
-    document.getElementById(menuItemsId).innerHTML = menuList;
+// Function to display total items count
+function displayItemCount() {
+    document.getElementById('breakfastTotalItems').textContent = `Total Breakfast Items: ${breakfastMenu.length}`;
+    document.getElementById('maincourseTotalItems').textContent = `Total Main Course Items: ${mainCourseMenu.length}`;
+    document.getElementById('dessertTotalItems').textContent = `Total Dessert Items: ${dessertMenu.length}`;
 }
 
-// Display all menu sections
-displayBreakfastMenu(); // Using the map method for breakfast menu
-displayMainCourseMenu(); // Using forEach for main course menu
-displayDessertMenu(); // Using for loop for dessert menu
+// Call functions to display menus
+window.onload = function() {
+    displayBreakfastMenu();
+    displayMainCourseMenu();
+    displayDessertMenu();
+    displayItemCount();
+};
