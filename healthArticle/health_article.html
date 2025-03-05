@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Articles</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+            color: #333;
+            padding: 40px;
+        }
+
+        /* Health Articles Section */
+        .health-articles {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 1.5px;
+        }
+
+        /* Article Styling */
+        .article {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        /* 3D Hover Effect */
+        .article:hover {
+            transform: perspective(1000px) rotateY(5deg) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Headings */
+        h2 {
+            font-size: 1.8rem;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #555;
+            margin-top: 15px;
+        }
+
+        /* Paragraphs */
+        p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: url('https://cdn-icons-png.flaticon.com/512/32/32213.png') no-repeat left center;
+            background-size: 20px;
+            padding-left: 30px;
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .health-articles {
+                padding: 20px;
+            }
+
+            .article {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            p, li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="health-articles">
+        <h1>Health Articles</h1>
+
+        <div class="article">
+            <h2>The Importance of Regular Exercise</h2>
+            <p>This article discusses the numerous benefits of regular exercise, including improved cardiovascular health, stronger muscles, better mental health, and increased longevity.</p>
+
+            <h3>Ways to Achieve:</h3>
+            <ul>
+                <li>Engage in at least 150 minutes of moderate-intensity aerobic activity per week.</li>
+                <li>Incorporate strength training exercises for major muscle groups at least twice a week.</li>
+                <li>Find physical activities you enjoy, such as walking, cycling, swimming, or dancing.</li>
+            </ul>
+
+            <h3>Benefits:</h3>
+            <ul>
+                <li>Enhanced cardiovascular fitness and reduced risk of heart diseases.</li>
+                <li>Stronger muscles and improved bone density.</li>
+                <li>Better mood and reduced risk of depression and anxiety.</li>
+                <li>Increased lifespan and overall better quality of life.</li>
+            </ul>
+        </div>
+
+        <div class="article">
+            <h2>Healthy Eating Habits for a Balanced Life</h2>
+            <p>Learn about the fundamentals of a balanced diet, including tips on incorporating fruits, vegetables, whole grains, lean proteins, and healthy fats into your meals.</p>
+
+            <h3>Ways to Achieve:</h3>
+            <ul>
+                <li>Consume a variety of colorful fruits and vegetables daily.</li>
+                <li>Opt for whole grains like brown rice, quinoa, and whole wheat bread.</li>
+                <li>Choose lean sources of protein such as poultry, fish, beans, and nuts.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
